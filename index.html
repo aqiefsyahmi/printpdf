@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Print PDF File</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfobject/2.2.4/pdfobject.min.js"></script>
+</head>
+<body>
+  <h1>Print PDF File</h1>
+  
+  <button onclick="printPDF()">Print PDF</button>
+  
+  <script>
+    function printPDF() {
+      const pdfURL = '/ModulWebDevelopment.pdf';  // Replace with the actual PDF file URL
+      PDFObject.embed(pdfURL, '#pdf-container');
+      setTimeout(() => {
+        window.frames['pdf-frame'].focus();
+        window.frames['pdf-frame'].print();
+      }, 2000); // Wait for PDFObject to load the PDF
+      
+    }
+  </script>
+
+  <div id="pdf-container">
+    <iframe id="pdf-frame" src="" style="width: 100%; height: 500px;"></iframe>
+  </div>
+</body>
+</html>
