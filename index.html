@@ -1,19 +1,9 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Print PDF</title>
+  <title>Download PDF</title>
 </head>
 <body>
-  <button onclick="printPDF()">Print PDF</button>
-
-  <script>
-    function printPDF() {
-      var pdfUrl = 'D:\coding_is_easy\printpdf\ModulWebDevelopment.pdf';
-      var printWindow = window.open(pdfUrl, '_blank');
-      printWindow.addEventListener('load', function () {
-        printWindow.print();
-      });
-    }
-  </script>
+  <a href="https://github.com/aqiefsyahmi/printpdf/raw/main/ModulWebDevelopment.pdf" download>Download PDF</a>
 </body>
 </html>
